@@ -1,4 +1,4 @@
-* ============================================================================*
+* Github ============================================================================*
  
 * Programme: Ali_Uppal_EC210C_PS1
 * Author: Ali Uppal
@@ -7,7 +7,7 @@
 
 * This programme has the following sections:
 * (0)  Preliminaries
-* (1)  Import Grilic data
+* (1)  Import Data & Merge
 * (2)  Question 1
 * (3)  Question 2
 * (4)  Question 3
@@ -16,7 +16,7 @@
 * (7)  Question 6
 * (8)  Question 7
 
-* =============================================================================
+* ============================================================================
 
 				* =================
 				* (0) Preliminaries
@@ -29,16 +29,16 @@ set 			more off
 *				set path structure
 cd				"C:\Users\auppa\Desktop\UCSD\First Year\Macro\Econ 210C Macro\Psets"
 
-				* =================================
-				* (1)  Import and save Grilic data
-				* =================================
+				* ========================
+				* (1)  Import Data & Merge
+				* ========================
 
-insheet using "C:\Users\auppa\Desktop\UCSD\First Year\Macro\Econ 210C Macro\Psets\Fixed Assets NIPA.csv", clear
+insheet using "Fixed Assets NIPA.csv", clear
 
 gen dateq = yq(year, quarter)
 format dateq %tq
 
-save "C:\Users\auppa\Desktop\UCSD\First Year\Macro\Econ 210C Macro\Psets\NIPA.dta", replace
+save "NIPA.dta", replace
 
 clear
 
